@@ -1,0 +1,28 @@
+<html>
+<script src="lineup.js"></script>
+<fieldset>
+  <legend>Justify</legend>
+  <input type="radio" id="left-justify" name="justify" value="left" checked><label for="left-justify">Left</label><br />
+  <input type="radio" id="right-justify" name="justify" value="right"><label for="right-justify">Right</label><br />
+</fieldset>
+<fieldset>
+  <legend>Spaces</legend>
+  <input type="radio" id="space-before" name="space-position" value="before"><label for="space-before">Before Delimiter</label><br />
+  <input type="radio" id="space-after" name="space-position" value="after" checked><label for="space-after">After Delimiter</label><br />
+</fieldset>
+<label for="delims">Delimiters</label>
+<input type="text" id="delims" value=",=(){}"/>
+<label for="wipe-adjacent-left">Wipe Previous Space</label>
+<input type="checkbox" id="wipe-adjacent-left">
+<label for="wipe-adjacent-right">Wipe Following Space</label>
+<input type="checkbox" id="wipe-adjacent-right"><br />
+<label for="replacement">Replacement character</label>
+<input type="text" id="replacement" placeholder="Leave empty for spaces"><br/>
+
+<textarea id="txt" rows="30" cols="120">
+</textarea>
+<br />
+<button onclick="doIt()">
+Line up
+</button>
+</html>
