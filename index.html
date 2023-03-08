@@ -1,28 +1,75 @@
 <html>
-<script src="./lineup.js"></script>
-<fieldset>
-  <legend>Justify</legend>
-  <input type="radio" id="left-justify" name="justify" value="left" checked><label for="left-justify">Left</label><br />
-  <input type="radio" id="right-justify" name="justify" value="right"><label for="right-justify">Right</label><br />
-</fieldset>
-<fieldset>
-  <legend>Spaces</legend>
-  <input type="radio" id="space-before" name="space-position" value="before"><label for="space-before">Before Delimiter</label><br />
-  <input type="radio" id="space-after" name="space-position" value="after" checked><label for="space-after">After Delimiter</label><br />
-</fieldset>
-<label for="delims">Delimiters</label>
-<input type="text" id="delims" value=",=(){}"/>
-<label for="wipe-adjacent-left">Wipe Previous Space</label>
-<input type="checkbox" id="wipe-adjacent-left">
-<label for="wipe-adjacent-right">Wipe Following Space</label>
-<input type="checkbox" id="wipe-adjacent-right"><br />
-<label for="replacement">Replacement character</label>
-<input type="text" id="replacement" placeholder="Leave empty for spaces"><br/>
-
-<textarea id="txt" rows="30" cols="120">
-</textarea>
-<br />
-<button onclick="doIt()">
-Line up
-</button>
+    <head>
+        <!--script src="./lineup.js"></script-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="theme-toggle" class="float-end todo">
+            <div class="form-check form-switch">
+                <label class="form-check-label" for="lightSwitch"> Dark Mode </label>
+                <input class="form-check-input" type="checkbox" id="lightSwitch" />
+            </div>
+        </div>
+        <div class="container">
+            <div id="options" class="row">
+                <div class="col-md-2">
+                    <legend>Justify</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="left-justify" name="justify" value="left" checked />
+                        <label class="form-check-label" for="left-justify">Left</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="right-justify" name="justify" value="right" />
+                        <label class="form-check-label" for="right-justify">Right</label>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                    <legend>Spaces</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="space-before" name="space-position" value="before" />
+                        <label class="form-check-label" for="space-before">Before Delimiter</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="space-after" name="space-position" value="after" checked />
+                        <label class="form-check-label" for="space-after">After Delimiter</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="wipe-adjacent-left" />
+                        <label class="form-check-label" for="wipe-adjacent-left">Wipe Previous Space</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="wipe-adjacent-right" />
+                        <label lass="form-check-label" for="wipe-adjacent-right">Wipe Following Space</label>
+                    </div>
+                </div>
+                <div id="inputs" class="col-md-6">
+                    <legend>Options</legend>
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text" for="delims">Delimiters</span>
+                        <input class="form-control" type="text" id="delims" value=",=(){}" />
+                    </div>
+                    <div class="input-group input-group-sm">
+                        <label class="input-group-text" for="replacement">Replacement character</label>
+                        <input class="form-control" type="text" id="replacement" placeholder="Leave empty for spaces" />
+                    </div>
+                </div>
+            </div>
+            <div id="text" class="text-center">
+                <textarea id="txt" rows="30" cols="120"></textarea>
+            </div>
+            <div id="controls" class="text-center">
+                <button onclick="doIt()" class="btn btn-primary btn-lg">Line up</button>
+            </div>
+        </div>
+        <footer class="footer mt-auto">
+            <div class="container">
+                <div class="float-end">
+                    <a href="https://www.buymeacoffee.com/sonoftunk" target="_blank">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important; width: 217px !important;" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>

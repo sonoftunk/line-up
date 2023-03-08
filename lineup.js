@@ -87,5 +87,5 @@ var doIt = function() {
 	});
   
   document.getElementById("txt").value = news.join("\n");
-  document.getElementById("txt").cols = maxLen;
+  //document.getElementById("txt").cols = maxLen;
 }
