@@ -86,6 +86,6 @@ var doIt = function() {
     
 	});
   
-  txtDom.value = news.join("\n");
-  txtDom.cols = maxLen;
+  document.getElementById("txt").value = news.join("\n");
+  document.getElementById("txt").cols = maxLen;
 }
