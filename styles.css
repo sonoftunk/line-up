@@ -1,0 +1,8 @@
+textarea {
+  font-family: monospace !important;
+  white-space: nowrap;
+}
+
+.todo {
+  display: none;
+}
